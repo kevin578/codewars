@@ -1,0 +1,55 @@
+
+
+<script>
+
+wel = language;
+
+var welcome = {
+	
+	language: {
+	english: 'Welcome',
+	czech: 'Vitejte',
+	danish: 'Velkomst',
+	dutch: 'Welkom',
+	estonian: 'Tere tulemast',
+	finnish: 'Tervetuloa',
+	flemish: 'Welgekomen',
+	french: 'Bienvenue',
+	german: 'Willkommen',
+	irish: 'Failte',
+	italian: 'Benvenuto',
+	latvian: 'Gaidits',
+	lithuanian: 'Laukiamas',
+	polish: 'Witamy',
+	spanish: 'Bienvenido',
+	swedish: 'Valkommen',
+	welsh: 'Croeso'
+	},
+
+	translate(lang){
+		greeting = this.language[lang];
+
+		if (greeting == undefined) {
+			return this.language.english;
+		}
+
+		else {
+			return greeting;
+		}
+	}
+
+
+}
+
+
+
+var greeting = welcome.translate(wel);
+
+console.log(greeting);
+
+
+
+
+
+
+</script>

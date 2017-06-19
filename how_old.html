@@ -1,0 +1,32 @@
+<script>
+
+
+function getAge(inputString){
+// return correct age (int). Happy coding :) 
+
+
+	var number = "";
+
+	for (var i = 0; i < inputString.length; i++) {
+		
+		if (!isNaN(inputString.charAt(i))) {
+			number = number + inputString.charAt(i);
+		}
+
+	}
+	number = parseInt(number);
+
+	console.log(number + 7);
+
+	}
+
+
+
+getAge("I'm 23 years old!");
+
+
+
+
+
+
+</script>

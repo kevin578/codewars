@@ -1,0 +1,47 @@
+<script>
+
+function  calculateAge(birth, now) {
+  	
+
+
+  	if (now > birth) {
+  		var age = now - birth;
+  		if (age == 1) {
+  			return("You are 1 year old");
+  		}
+  		else {
+  			return("You are "+age+" years old");
+  		}
+
+  	}
+
+  	if (now < birth)
+  		var age = birth - now;
+  		if (age == 1) {
+  			return("You will be born in 1 year");
+  		}
+
+  		else {
+  			return("You will be born in "+age+" years");		
+  		}
+
+  	if (now == birth) {
+  		return("You were born this very year!");
+  	}
+
+
+}
+
+calculateAge(2002, 2000);
+
+
+
+
+
+
+
+
+
+
+
+</script>

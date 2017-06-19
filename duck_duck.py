@@ -23,7 +23,7 @@ def duck_duck_goose(players, goose):
 	if goose > len(players):
 		goose = goose % len(players)
 
-	print players[goose].name
+	return players[goose].name
 
 
 

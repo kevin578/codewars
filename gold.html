@@ -1,0 +1,45 @@
+<script>
+
+golds = [4,7,2,9,5,2];
+	
+
+function distributionOf(golds){
+
+
+var beggar = 1;
+var piles = [0,0];
+
+
+  while (golds.length > 1) {
+  
+  if (golds[0] > golds[1]) {
+  	piles[beggar] += golds[0];
+  	golds.splice(0,1);
+  }
+  else if (golds[1] > golds[0]) {
+  	piles[beggar] += golds[1];
+  	golds.splice(1,1);
+  }
+  else {
+  	piles[beggar] += golds[0];  
+  	golds.splice(0,1);
+
+  }
+  
+  if (beggar == 0) {beggar = 1;}
+  else if (beggar == 1) {beggar = 0;}  
+
+
+
+ }
+
+ piles[beggar] += golds[0]; 
+  
+return piles
+
+}
+
+
+
+
+</script>

@@ -1,0 +1,55 @@
+<script>
+
+function tickets(peopleInLine){
+  
+var people = peopleInLine;
+var fifties = 0;
+var twenty_fives = 0;
+
+
+for (var i = 0; i < people.length; i++){
+
+	if (people[i] == 25) {
+		twenty_fives++;
+	} 
+	 
+	if (people[i] == 50) {
+		fifties++;
+		twenty_fives--;
+	}
+
+
+	if (people[i] == 100) {
+		if (fifties > 0) {
+			twenty_fives--;
+			fifties--;
+		}
+		else {
+			twenty_fives = twenty_fives - 3;
+		}
+	}
+
+
+	if (fifties < 0 || twenty_fives < 0)  {
+		return "NO"
+	}
+
+}
+
+return "YES"
+
+
+}
+
+
+
+console.log(tickets([25, 25, 50, 50]));
+
+
+
+
+
+
+
+
+</script>
